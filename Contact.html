@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - iCoder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(220, 220, 220);
+        }
+        .container {
+            margin: 70px auto;
+            padding: 50px;
+        }
+        .contact-form {
+            background: whitesmoke;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            height:500px;
+            margin: 50px auto;
+
+        }
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+            font-size: 40px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom:40px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .contact-form textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .contact-form button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+            width:455px;
+        }
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">iCoder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/About.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://www.intelegain.com/blogs/">Technology</a></li>
+                            <li><a class="dropdown-item" href="https://www.geeksforgeeks.org/web-development/">Web Development</a></li>
+                            <li><a class="dropdown-item" href="https://techcrunch.com/">Tech Fun</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Support</a></li>
+                            <li><a class="dropdown-item" href="#">Write About Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm" onsubmit="sendEmail(event)">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your e-mail" required>
+
+            <label for="query">Your Query:</label>
+            <textarea id="query" name="query" placeholder="Enter your query" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <!-- About Section -->
+            <div class="col-md-3">
+              <h5>About TechBlog</h5>
+              <p>Your go-to source for the latest in web development, AI, and emerging tech.</p>
+            </div>
+      
+            <!-- Quick Links -->
+            <div class="col-md-3">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="/" class="text-white text-decoration-none">Home</a></li>
+                <li><a href="About.html" class="text-white text-decoration-none">About</a></li>
+                <li><a href="Contact.html" class="text-white text-decoration-none">Contact</a></li>
+                <li><a href="/privacy-policy" class="text-white text-decoration-none">Privacy Policy</a></li>
+              </ul>
+            </div>
+      
+            <!-- Social Media -->
+            <div class="col-md-3">
+              <h5>Follow Us</h5>
+              <a href="https://twitter.com/yourhandle" class="text-white me-2" target="_blank">Twitter</a> |
+              <a href="https://github.com/yourprofile" class="text-white me-2" target="_blank">GitHub</a> |
+              <a href="https://linkedin.com/in/yourprofile" class="text-white" target="_blank">LinkedIn</a>
+            </div>
+      
+            <!-- Newsletter Subscription -->
+            <div class="col-md-3">
+              <h5>Subscribe</h5>
+              <form id="subscribe-form">
+                <input type="email" class="form-control mb-2" id="email" placeholder="Enter your email" required>
+                <button class="btn btn-primary w-100" type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+      
+          <!-- Copyright -->
+          <div class="text-center mt-3">
+            <p>© 2025 TechBlog by Ridhima. All Rights Reserved.</p>
+            <a href="#" class="text-white">Back to top</a>
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form data
+            const email = document.getElementById('email').value.trim();
+            const query = document.getElementById('query').value.trim();
+
+            // Validate email format
+            if (!email || !email.includes("@") || !email.includes(".")) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+
+            if (!query) {
+                alert("Please enter your query.");
+                return;
+            }
+
+            // Construct the mailto link
+            const subject = "New Query from Contact Form";
+            const body = `Email: ${email}\nQuery: ${query}`;
+            const mailtoLink = `mailto:ridhimasr16@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            // Open the default email client
+            window.location.href = mailtoLink;
+
+            // Show confirmation message
+            alert("Redirecting to your email client. Please send the email to complete your query submission.");
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
